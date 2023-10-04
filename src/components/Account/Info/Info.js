@@ -1,7 +1,7 @@
 import { Button, Icon } from "semantic-ui-react";
 import { DateTime } from "luxon";
 import { useAuth } from "@/hooks";
-import styles from "./Info.module.scss";
+import styles from "./info.module.scss";
 
 export function Info() {
   const { user } = useAuth();
