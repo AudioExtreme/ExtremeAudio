@@ -12,6 +12,7 @@ import {
 } from "@/components/Account";
 import { Separator, Seo } from "@/components/Shared";
 import styles from "./account.module.scss";
+import Head from 'next/head';
 
 export default function AccountPage() {
   const { user, logout } = useAuth();
@@ -82,6 +83,19 @@ export default function AccountPage() {
     <>
 
     <Seo title="Mi cuenta"/>
+
+    <Head>
+        {/* Agrega tus etiquetas de Google Tag Manager aquí */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-42911K2147"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-42911K2147');
+          `}
+        </script>
+      </Head>
 
       <BasicLayout isContainer relative>
         <Info />
