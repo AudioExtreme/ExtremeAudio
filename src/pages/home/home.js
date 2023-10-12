@@ -2,6 +2,7 @@ import { Container } from "semantic-ui-react";
 import { BasicLayout } from "@/layouts";
 import { Home } from "@/components/Home";
 import { Separator, BarTrust, BannerAd, Seo } from "@/components/Shared";
+import Head from 'next/head';
 
 const categoryId = {
   speakers: 1,
@@ -16,6 +17,19 @@ export default function HomePage() {
     <>
      
      <Seo/>
+
+    <Head>
+        {/* Agrega tus etiquetas de Google Tag Manager aquí */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-42911K2147"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-42911K2147');
+          `}
+        </script>
+      </Head>
 
       <BasicLayout>
         
