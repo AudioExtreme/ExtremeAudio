@@ -1,6 +1,7 @@
 import { Container } from "semantic-ui-react";
 import { size } from "lodash";
 import { BasicLayout } from "@/layouts";
+import Head from 'next/head';
 import {
   GridProductos,
   Separator,
@@ -16,6 +17,19 @@ export default function CategoryPage(props) {
   return (
     <>
       <Seo title={`${category.attributes.title}`} />
+  
+  <Head>
+        {/* Agrega tus etiquetas de Google Tag Manager aquí */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-42911K2147"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-42911K2147');
+          `}
+        </script>
+      </Head>
 
       <BasicLayout relative>
         <Container>
